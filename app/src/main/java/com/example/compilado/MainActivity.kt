@@ -15,7 +15,6 @@ import com.example.compilado.presentation.navigation.bottomBar.BottomNavigationS
 import com.example.compilado.presentation.navigation.bottomBar.CompiladoNavigation
 import com.example.compilado.presentation.navigation.lateralMenu.LateralMenu
 import com.example.compilado.presentation.navigation.lateralMenu.TopBar
-import com.example.compilado.presentation.navigation.tabMov.TabMovScreen
 import com.example.compilado.presentation.viewmodel.UserViewModel
 import com.example.compilado.ui.theme.CompiladoTheme
 

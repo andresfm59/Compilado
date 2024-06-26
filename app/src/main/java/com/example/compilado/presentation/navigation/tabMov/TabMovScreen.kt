@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.compilado.MainScreen
 import com.example.compilado.presentation.navigation.item.Items_tab_mov
 import com.example.compilado.presentation.navigation.item.Items_tab_mov.*
 import com.example.compilado.ui.theme.CompiladoTheme
