@@ -15,7 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.compilado.R
-import com.example.compilado.presentation.navigation.currentRoute
+import com.example.compilado.presentation.navigation.bottomBar.currentRoute
 import com.example.compilado.presentation.navigation.item.Items_menu_lateral.*
 import kotlinx.coroutines.launch
 

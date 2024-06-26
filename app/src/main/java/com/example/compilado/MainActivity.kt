@@ -11,10 +11,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.compilado.presentation.navigation.BottomNavigationScreen
-import com.example.compilado.presentation.navigation.CompiladoNavigation
+import com.example.compilado.presentation.navigation.bottomBar.BottomNavigationScreen
+import com.example.compilado.presentation.navigation.bottomBar.CompiladoNavigation
 import com.example.compilado.presentation.navigation.lateralMenu.LateralMenu
 import com.example.compilado.presentation.navigation.lateralMenu.TopBar
+import com.example.compilado.presentation.navigation.tabMov.TabMovScreen
 import com.example.compilado.presentation.viewmodel.UserViewModel
 import com.example.compilado.ui.theme.CompiladoTheme
 
@@ -45,7 +46,6 @@ fun MainScreen() {
         drawerState = drawerState
     ) {
         BottomBarNav(navController, drawerState)
-
     }
 }
 
@@ -72,5 +72,7 @@ fun BottomBarNav(
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun BottomNavigationPreview() {
-    CompiladoTheme { MainScreen() }
+    val navController = rememberNavController()
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+    CompiladoTheme { BottomBarNav(navController, drawerState) }
 }

@@ -6,7 +6,7 @@ import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.example.compilado.presentation.navigation.NavScreen
+import com.example.compilado.presentation.navigation.bottomBar.NavScreen
 
 sealed class Items_bottom_nav (
     val icon: ImageVector,

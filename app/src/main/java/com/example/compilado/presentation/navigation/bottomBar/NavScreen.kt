@@ -1,4 +1,4 @@
-package com.example.compilado.presentation.navigation
+package com.example.compilado.presentation.navigation.bottomBar
 
 enum class NavScreen {
     HomeScreen,

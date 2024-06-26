@@ -6,7 +6,7 @@ import androidx.compose.material.icons.outlined.CreditCard
 import androidx.compose.material.icons.outlined.PriceCheck
 import androidx.compose.material.icons.outlined.RealEstateAgent
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.example.compilado.presentation.navigation.NavScreen
+import com.example.compilado.presentation.navigation.bottomBar.NavScreen
 
 sealed class Items_menu_lateral(
     val icon: ImageVector,
