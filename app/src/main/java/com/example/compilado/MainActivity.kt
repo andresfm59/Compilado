@@ -9,9 +9,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.compilado.presentation.navigation.BottomNavigationScreen
 import com.example.compilado.presentation.navigation.CompiladoNavigation
+import com.example.compilado.presentation.navigation.lateralMenu.LateralMenu
+import com.example.compilado.presentation.navigation.lateralMenu.TopBar
 import com.example.compilado.presentation.viewmodel.UserViewModel
 import com.example.compilado.ui.theme.CompiladoTheme
 
@@ -36,18 +39,35 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+    LateralMenu(
+        navController = navController,
+        drawerState = drawerState
+    ) {
+        BottomBarNav(navController, drawerState)
+
+    }
+}
+
+@Composable
+fun BottomBarNav(
+    navController: NavHostController,
+    drawerState: DrawerState
+) {
     Scaffold(
+        topBar = { TopBar(drawerState) },
         bottomBar = { BottomNavigationScreen(navController) }
     ) { padding ->
         Box(
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
-        ){
+        ) {
             CompiladoNavigation(navController = navController)
         }
     }
 }
+
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
